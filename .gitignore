@@ -1,22 +1,22 @@
-# =========================
+
 # General
-# =========================
+
 *.log
 *.tmp
 *.swp
 .DS_Store
 Thumbs.db
 
-# =========================
+
 # Environment variables
-# =========================
+
 .env
 .env.*
 *.env
 
-# =========================
+
 # Node.js / Frontend
-# =========================
+
 node_modules/
 dist/
 build/
@@ -26,9 +26,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# =========================
+
 # Android / Kotlin
-# =========================
+
 *.iml
 .gradle/
 local.properties
@@ -42,15 +42,15 @@ captures/
 *.apk
 *.aab
 
-# =========================
+
 # Java / Kotlin
-# =========================
+
 *.class
 out/
 
-# =========================
+
 # Python
-# =========================
+
 __pycache__/
 *.pyc
 *.pyo
@@ -58,24 +58,24 @@ __pycache__/
 venv/
 .env/
 
-# =========================
+
 # Laravel / PHP
-# =========================
+
 vendor/
 node_modules/
 storage/*.key
 storage/logs/
 bootstrap/cache/
 
-# =========================
+
 # Database
-# =========================
+
 *.sqlite
 *.db
 
-# =========================
+
 # OS / Editor
-# =========================
+
 .vscode/
 .idea/
 *.suo
