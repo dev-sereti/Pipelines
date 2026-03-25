@@ -46,7 +46,7 @@ COLUMN_HEADERS = [
     "Relative Humidity 2m (%)",
 ]
 
-# Column rename map — raw API names → Excel header names
+# Column rename map(raw API names → Excel header names)
 RENAME_MAP = {
     "date":                 "Date & Time",
     "location":             "Location",
