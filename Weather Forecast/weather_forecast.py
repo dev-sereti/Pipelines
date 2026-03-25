@@ -87,7 +87,6 @@ responses = openmeteo.weather_api(url, params=params)
 
 # Process 3 locations
 
-
 all_frames = []
 
 for i, response in enumerate(responses):
@@ -128,14 +127,13 @@ for i, response in enumerate(responses):
 
     all_frames.append(hourly_dataframe)
 
-# Combine all locations and rename columns immediately
+# Combine all locations and rename columns
 new_df = pd.concat(all_frames, ignore_index=True)
 new_df = new_df.rename(columns=RENAME_MAP)
 new_df["Date & Time"] = pd.to_datetime(new_df["Date & Time"], errors="coerce")
 
 
 # Load existing data if file exists
-
 
 def load_existing_data(path: Path) -> pd.DataFrame:
     if not path.exists():
@@ -151,9 +149,7 @@ def load_existing_data(path: Path) -> pd.DataFrame:
         print(f"Could not read existing file ({e}) — creating new file.")
         return pd.DataFrame(columns=COLUMN_HEADERS)
 
-
 # Merge and deduplicate
-
 
 def merge_and_deduplicate(existing_df: pd.DataFrame, new_df: pd.DataFrame) -> pd.DataFrame:
     if existing_df.empty:
@@ -170,9 +166,7 @@ def merge_and_deduplicate(existing_df: pd.DataFrame, new_df: pd.DataFrame) -> pd
     print(f"Appended {new_rows} new rows — total: {len(combined)} rows")
     return combined
 
-
 # Excel formatting helpers
-
 
 def thin_border():
     s = Side(style="thin", color="BFBFBF")
@@ -195,9 +189,7 @@ def data_style(cell, even_row=False, loc_color=None):
     else:
         cell.fill = PatternFill("solid", start_color="FFFFFF")
 
-
 # Save to Excel
-
 
 def save_to_excel(df: pd.DataFrame, path: Path):
     wb = Workbook()
@@ -302,9 +294,7 @@ def save_to_excel(df: pd.DataFrame, path: Path):
     wb.save(path)
     print(f"Saved → {path}")
 
-
 # Run — load existing, merge, save
-
 
 existing_df = load_existing_data(EXCEL_FILE)
 combined_df = merge_and_deduplicate(existing_df, new_df)
