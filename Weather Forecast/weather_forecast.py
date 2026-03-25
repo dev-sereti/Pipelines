@@ -287,7 +287,7 @@ def save_to_excel(df: pd.DataFrame, path: Path):
     ws_sum.column_dimensions["D"].width = 10
 
     wb.save(path)
-    print(f"Saved → {path}")
+    print(f"Saved to {path}")
 
 # Run — load existing, merge, save
 
