@@ -8,18 +8,14 @@ from openpyxl.utils import get_column_letter
 from datetime import datetime
 from pathlib import Path
 
-
 # Output directory
-
 
 OUTPUT_DIR = Path(r"C:\Users\Sereti\OneDrive - Victory Farms Ltd\Documents\Weather")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 EXCEL_FILE = OUTPUT_DIR / "weather_forecast.xlsx"
 
-
 # Location mapping (coordinates must match the order in params exactly)
-
 
 LOCATIONS = [
     {"name": "Roo Farm", "lat": -0.5603, "lon": 34.0623},
