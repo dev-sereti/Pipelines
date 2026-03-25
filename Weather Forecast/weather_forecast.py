@@ -41,7 +41,6 @@ COLUMN_HEADERS = [
     "Rain (mm)",
     "Relative Humidity 2m (%)",
 ]
-
 # Column rename map(Raw API names → Excel header names)
 RENAME_MAP = {
     "date":                 "Date & Time",
