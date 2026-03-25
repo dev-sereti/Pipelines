@@ -16,7 +16,6 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 EXCEL_FILE = OUTPUT_DIR / "weather_forecast.xlsx"
 
 # Location mapping (coordinates must match the order in params exactly)
-
 LOCATIONS = [
     {"name": "Roo Farm", "lat": -0.5603, "lon": 34.0623},
     {"name": "Kagano",   "lat": -2.3328, "lon": 29.0934},
