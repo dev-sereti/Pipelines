@@ -53,8 +53,6 @@ RENAME_MAP = {
     "rain":                 "Rain (mm)",
     "relative_humidity_2m": "Relative Humidity 2m (%)",
 }
-
-
 # API Setup
 
 cache_session = requests_cache.CachedSession('.cache', expire_after=3600)
