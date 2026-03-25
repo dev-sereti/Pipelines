@@ -46,7 +46,7 @@ COLUMN_HEADERS = [
     "Relative Humidity 2m (%)",
 ]
 
-# Column rename map(raw API names → Excel header names)
+# Column rename map(Raw API names → Excel header names)
 RENAME_MAP = {
     "date":                 "Date & Time",
     "location":             "Location",
@@ -62,7 +62,6 @@ RENAME_MAP = {
 
 
 # API Setup
-
 
 cache_session = requests_cache.CachedSession('.cache', expire_after=3600)
 retry_session = retry(cache_session, retries=5, backoff_factor=0.2)
@@ -85,7 +84,6 @@ params = {
 }
 
 responses = openmeteo.weather_api(url, params=params)
-
 
 # Process 3 locations
 
