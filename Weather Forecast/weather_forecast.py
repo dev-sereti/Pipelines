@@ -299,4 +299,5 @@ save_to_excel(combined_df, EXCEL_FILE)
 today       = datetime.now().strftime("%Y%m%d_%H%M")
 backup_path = OUTPUT_DIR / f"weather_forecast_backup_{today}.xlsx"
 save_to_excel(combined_df, backup_path)
-print(f"Backup saved → {backup_path}")
+print(f"Backup saved to {backup_path}")
+
